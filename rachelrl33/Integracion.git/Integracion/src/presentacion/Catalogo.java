@@ -30,6 +30,7 @@ import javax.swing.JOptionPane;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
 
 public class Catalogo extends JFrame {
 
@@ -78,9 +79,10 @@ public class Catalogo extends JFrame {
 	 * Create the frame.
 	 */
 	public Catalogo() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Catalogo.class.getResource("/presentacion/car (1).png")));
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 705, 480);
+		setBounds(100, 100, 705, 498);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -102,7 +104,7 @@ public class Catalogo extends JFrame {
 		
 		lblCatlogo = new JLabel("  CATÁLOGO");
 		lblCatlogo.setForeground(SystemColor.textHighlight);
-		lblCatlogo.setFont(new Font("Trebuchet MS", Font.BOLD, 14));
+		lblCatlogo.setFont(new Font("Trebuchet MS", Font.BOLD, 17));
 		GridBagConstraints gbc_lblCatlogo = new GridBagConstraints();
 		gbc_lblCatlogo.gridwidth = 2;
 		gbc_lblCatlogo.insets = new Insets(0, 0, 5, 5);
@@ -112,7 +114,7 @@ public class Catalogo extends JFrame {
 		
 		lblCochesDisponibles = new JLabel("Coches disponibles");
 		lblCochesDisponibles.setIcon(new ImageIcon(Catalogo.class.getResource("/presentacion/car (1).png")));
-		lblCochesDisponibles.setFont(new Font("Trebuchet MS", Font.BOLD, 13));
+		lblCochesDisponibles.setFont(new Font("Trebuchet MS", Font.BOLD, 14));
 		GridBagConstraints gbc_lblCochesDisponibles = new GridBagConstraints();
 		gbc_lblCochesDisponibles.anchor = GridBagConstraints.WEST;
 		gbc_lblCochesDisponibles.insets = new Insets(0, 0, 5, 5);
@@ -162,7 +164,7 @@ public class Catalogo extends JFrame {
 		contentPane.add(panel_1, gbc_panel_1);
 		GridBagLayout gbl_panel_1 = new GridBagLayout();
 		gbl_panel_1.columnWidths = new int[]{40, 99, 40, 105, 34, 0};
-		gbl_panel_1.rowHeights = new int[]{46, 0, 39, 0, 39, 0, 0, 39, 52, 0};
+		gbl_panel_1.rowHeights = new int[]{46, 32, 39, 0, 39, 0, 0, 39, 52, 0};
 		gbl_panel_1.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		gbl_panel_1.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		panel_1.setLayout(gbl_panel_1);
@@ -180,7 +182,7 @@ public class Catalogo extends JFrame {
 		lblNombre = new JLabel("Nombre");
 		lblNombre.setEnabled(false);
 		GridBagConstraints gbc_lblNombre = new GridBagConstraints();
-		gbc_lblNombre.anchor = GridBagConstraints.WEST;
+		gbc_lblNombre.anchor = GridBagConstraints.SOUTHWEST;
 		gbc_lblNombre.insets = new Insets(0, 0, 5, 5);
 		gbc_lblNombre.gridx = 1;
 		gbc_lblNombre.gridy = 1;
