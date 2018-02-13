@@ -306,8 +306,8 @@ public class Catalogo extends JFrame {
 		modeloLista = new CustomListModel();
 		list.setModel(modeloLista);
 		
-		Coche u1 = new Coche("Mercedes Benz", "2010", "5,000", "Negro", "2");
-		Coche u2 = new Coche("Mercedes Clase A", "2012", "7,000", "Rojo", "5"); 
+		Coche u1 = new Coche("Mercedes Benz", "Negro","2010", "5,000","2");
+		Coche u2 = new Coche("Mercedes Clase A", "Rojo", "2012", "7,000", "5"); 
 		
 		modeloLista.addCoche(u1);
 		modeloLista.addCoche(u2);
